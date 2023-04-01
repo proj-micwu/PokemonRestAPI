@@ -7,7 +7,10 @@ class ActiveSupport::TestCase
   parallelize(workers: :number_of_processors, with: :threads)
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  # fixtures :all
+  
+  # seed the test db with the data from pokemon.csv
+  Rails.application.load_seed
 
   # Add more helper methods to be used by all tests here...
 end
